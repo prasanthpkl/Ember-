@@ -1,0 +1,13 @@
+<section>
+    <form>
+        <legend>Login</legend>
+        <label class="form-label" for="name">Enter Name:</label>
+        <Input class="form-control" id="name" @value={{this.name}}>Enter Name:</Input>
+        {{!-- <input class="form-control" type="text" id="name"> --}}
+        <label class="form-label" for="password">Enter Password:</label>
+        {{!-- <input class="form-control" id="password" type="password"> --}}
+        <Input @type="password" class="form-control" id="password" @value={{this.password}}>Enter Password:</Input>
+        <button class="btn border border-black mt-3" type="button" {{on "click" this.login_user}}>Login</button>
+    </form>
+</section>
+{{yield}}

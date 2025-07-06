@@ -1,0 +1,41 @@
+
+<form>
+      <div class="mt-4 space-y-3">
+        <div>
+          <label class="form-label block font-medium mt-3" for="scheme-name">Scheme Name:</label>
+          <Input id="scheme-name" @type="text" class="form-control" @value={{@scheme}} disabled></Input>
+        </div>
+
+        <div>
+          <label class="form-label block font-medium mt-3" for="name">Full Name:</label>
+          <Input id="name" @type="text" class="form-control" @value={{this.name}} required></Input>
+        </div>
+
+        <div>
+          <label class="form-label block font-medium mt-3" for="email">Email Address:</label>
+          <Input id="email" @type="text" class="form-control" @value={{this.email}} required></Input>
+        </div>
+
+        <div>
+          <label class="form-label block font-medium mt-3" for="mobile">Phone Number:</label>
+          <Input id="mobile" @type="text" class="form-control" @value={{this.mobile}} required></Input>
+        </div>
+
+        <div>
+          <label class="form-label block font-medium mt-3" for="address">Address:</label>
+          <textarea id="address" name="address" class="form-control border rounded"></textarea>
+        </div>
+
+        <div>
+          <label class="form-label block font-medium mt-3" for="date of birth">Date of Birth:</label>
+          <input id="date_of_birth" type="date" name="dob" class="form-control border rounded" />
+        </div>
+
+        <div>
+          <label class="form-label block font-medium mt-3" for="reason">Reason for Applying:</label>
+          <textarea id="reason" name="reason" class="form-control border rounded px-3 py-2 w-full" placeholder="Explain why you are eligible and want to apply" ></textarea>
+        </div>
+        
+        <button type="button" class=" px-4 py-2 rounded mt-4" {{on "click" this.apply_scheme}}>Apply Now</button>
+      </div>
+    </form>

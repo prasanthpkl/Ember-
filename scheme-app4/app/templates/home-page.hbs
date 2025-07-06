@@ -1,0 +1,7 @@
+{{page-title "HomePage"}}
+{{@model.name}}
+<h2>Available Schemes to apply</h2>
+{{#each @model as |scheme_data|}}
+<SchemeComponent @name={{scheme_data.name}} @description={{scheme_data.description}} @eligibility={{scheme_data.eligibility}}/>
+{{/each}}
+{{outlet}}

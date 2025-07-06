@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <section class="border border-black w-50 rounded-5 p-5">
+        <h3>SignUp</h3>
+         <form>
+            <label for="name">Enter Name:</label>
+            <Input @type="text" id="name" class="form-control" @value={{this.name}}></Input>
+            <label for="mail">Enter email:</label>
+            <Input @type="text" id="mail" class="form-control" @value={{this.email}}></Input>
+            <label for="mobile">Enter PhoneNumber:</label>
+            <Input @type="text" id="mobile" class="form-control" @value={{this.mobile}}></Input>
+            <label for="password">Enter Password:</label>
+            <Input id="password" class="form-control" @value={{this.password}}></Input>
+            <button class="btn border border-black  mt-4" type="button" {{on "click" this.create_user}}>Create Account</button>
+        </form>
+    </section>
+</div>

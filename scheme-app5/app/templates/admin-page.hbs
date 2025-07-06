@@ -1,0 +1,22 @@
+{{page-title "AdminPage"}}
+<div class="container mt-4">
+<h3>Add New Scheme:</h3>
+<form class="mt-4">
+<label class="form-label" for="name">Enter Name:</label>
+<Input id="name" @value={{this.name}} class="form-control" @type="text"></Input>
+<label for="description" class="form-label">Enter description:</label>
+<Input id="description" @value={{this.description}} class="form-control" @type="text"></Input>
+<label for="eligibility">Enter eligibility:</label>
+<Input id="eligibility" @value={{this.eligibility}} class="form-control" @type="text"></Input>
+<button type="button" class="btn border border-black mt-3" {{on "click" this.add_scheme}}>Add Scheme</button>
+<button type="button" class="btn border border-black mt-3" {{on "click" this.show_schemes}}>Show User Applications</button>
+{{!-- <button type="button" class="btn border border-black mt-3" {{on "click" this.show_users}}>Show User Details</button> --}}
+</form>
+</div>
+<div class="container mt-5">
+    {{#if this.show}}
+        <h4 class="mt-3">User Applications:</h4>
+        <UserApplication/>
+    {{/if}}
+</div>
+{{outlet}}

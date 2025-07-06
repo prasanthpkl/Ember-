@@ -1,0 +1,12 @@
+{{#each this.user_application as |application|}}
+<section class="card mt-3">
+  <div class="card-body">
+    <h3 class="card-title h5">Name: {{application.name}}</h3>
+    <p class="card-text"><strong>Email:</strong> {{application.email}}</p>
+    <p class="card-text"><strong>Mobile:</strong> {{application.mobile}}</p>
+    <p class="card-text"><strong>Scheme:</strong> {{application.scheme}}</p>
+    <p class="card-text"><strong>Status:</strong> {{application.status}}</p>
+    <p class="card-text"><strong>UserId:</strong> {{application.userId}}</p>
+  </div>
+</section>
+{{/each}}

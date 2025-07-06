@@ -1,0 +1,15 @@
+{{page-title "AdminPage"}}
+<form>
+<legend>Add New Scheme:</legend>
+<label class="form-label" for="name">Enter Name:</label>
+{{!-- <input id="name" type="text" class="form-control"> --}}
+<Input id="name" @value={{this.name}} class="form-control" @type="text"></Input>
+<label for="description" class="form-label">Enter description:</label>
+{{!-- <input id="description" type="text" class="form-control"> --}}
+<Input id="description" @value={{this.description}} class="form-control" @type="text"></Input>
+<label for="eligibility">Enter eligibility:</label>
+{{!-- <input id="eligibility" type="text" class="form-control"> --}}
+<Input id="eligibility" @value={{this.eligibility}} class="form-control" @type="text"></Input>
+<button type="button" class="btn border border-black mt-3" {{on "click" this.add_scheme}}>Add Scheme</button>
+</form>
+{{outlet}}
